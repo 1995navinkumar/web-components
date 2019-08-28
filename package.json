@@ -1,0 +1,22 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "POC for different web components",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app"
+  },
+  "author": "Harish",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "lit-element": "^2.2.1",
+    "livereload": "^0.8.0",
+    "server-static": "^2.0.5"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "should": "^13.2.3"
+  }
+}

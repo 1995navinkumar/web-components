@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Components(Token field)</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+</head>
+<body>
+    <tk-field>
+        <li is="tk-options">One</li>
+        <li is="tk-options">four</li>
+        <li is="tk-options">Three</li>
+    </tk-field>
+    <h1>Hello</h1>
+    <template id="token-template">
+        <style>
+            .token-input {
+                position: relative;
+                border: 1px solid black;
+                height: 36px;
+            }
+
+            .token-input > input {
+                border: none;
+            }
+
+            .token-suggestions {
+                position: absolute;
+                height: 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            } 
+
+            .token-suggestions.list-open {
+                border: 1px solid black;
+                height: auto;
+                top: 100%;
+                width: 100%;
+                background-color: #eeeeee
+            }
+        </style>
+        <div class="token-input">
+            <div class="selected-token"></div>
+            <input type="text">
+            <div class="token-suggestions">
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
