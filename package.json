@@ -16,7 +16,7 @@
     "server-static": "^2.0.5"
   },
   "devDependencies": {
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "should": "^13.2.3"
   }
 }
